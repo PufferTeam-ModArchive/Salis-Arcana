@@ -154,11 +154,13 @@ public enum Mixins {
     ITEM_COUNTING_FIX(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.correctItemInsertion::isEnabled)
-        .addMixinClasses("lib.MixinInventoryUtils_AmountCounting"),
+        .addMixinClasses("lib.MixinInventoryUtils_AmountCounting")
+        .addTargetedMod(TargetedMod.THAUMCRAFT)),
     BANNER_PICK_BLOCK(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.bannerPickBlock::isEnabled)
-        .addMixinClasses("blocks.MixinBlockWoodenDevice_BannerPickBlock"),
+        .addMixinClasses("blocks.MixinBlockWoodenDevice_BannerPickBlock")
+        .addTargetedMod(TargetedMod.THAUMCRAFT)),
     JAR_NO_CREATIVE_DROPS(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.jarNoCreativeDrops::isEnabled)
@@ -167,19 +169,23 @@ public enum Mixins {
     BANNER_NO_CREATIVE_DROPS(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.bannerNoCreativeDrops::isEnabled)
-        .addMixinClasses("blocks.MixinBlockWoodenDevice_NoBannerCreativeDrops"),
+        .addMixinClasses("blocks.MixinBlockWoodenDevice_NoBannerCreativeDrops")
+        .addTargetedMod(TargetedMod.THAUMCRAFT)),
     WAND_FOCUS_LEVEL_PATCH(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.upgradedFocusVisCost::isEnabled)
-        .addMixinClasses("api.MixinItemFocusBasic_WandUpgradeLevel"),
+        .addMixinClasses("api.MixinItemFocusBasic_WandUpgradeLevel")
+        .addTargetedMod(TargetedMod.THAUMCRAFT)),
     JAR_PICK_BLOCK(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.jarPickBlock::isEnabled)
-        .addMixinClasses("blocks.MixinBlockJar_PickBlock"),
+        .addMixinClasses("blocks.MixinBlockJar_PickBlock")
+        .addTargetedMod(TargetedMod.THAUMCRAFT)),
     BANNER_PHIAL_CONSUMPTION(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.bannerPhialConsumption::isEnabled)
-        .addMixinClasses("blocks.MixinBlockWoodenDevice_BannerPhialConsumption"),
+        .addMixinClasses("blocks.MixinBlockWoodenDevice_BannerPhialConsumption")
+        .addTargetedMod(TargetedMod.THAUMCRAFT)),
     THAUMATORIUM_MULTI_CONTAINER(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.thaumatoriumMultiContainer::isEnabled)
@@ -458,8 +464,7 @@ public enum Mixins {
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.features.deadlyGazeMobCheck::isEnabled)
         .addMixinClasses("lib.MixinWarpEvents_DeadlyGaze")
-        .addTargetedMod(TargetedMod.THAUMCRAFT)),
-    ;
+        .addTargetedMod(TargetedMod.THAUMCRAFT));
     // spotless:on
 
     private final List<String> mixinClasses;
