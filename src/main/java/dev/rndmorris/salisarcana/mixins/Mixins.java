@@ -179,7 +179,11 @@ public enum Mixins {
     BANNER_PHIAL_CONSUMPTION(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.bannerPhialConsumption::isEnabled)
-        .addMixinClasses("blocks.MixinBlockWoodenDevice_BannerPhialConsumption")
+        .addMixinClasses("blocks.MixinBlockWoodenDevice_BannerPhialConsumption"),
+    THAUMATORIUM_MULTI_CONTAINER(new Builder().setPhase(Phase.LATE)
+        .setSide(Side.BOTH)
+        .setApplyIf(SalisConfig.bugfixes.thaumatoriumMultiContainer::isEnabled)
+        .addMixinClasses("container.MixinContainerThaumatorium_MultiContainer")
         .addTargetedMod(TargetedMod.THAUMCRAFT)),
 
     // Features
