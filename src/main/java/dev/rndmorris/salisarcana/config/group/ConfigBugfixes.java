@@ -164,6 +164,11 @@ public class ConfigBugfixes extends ConfigGroup {
         this,
         "bannerNoCreativeDrops",
         "Prevent Banners from dropping items when broken in Creative.");
+    
+    public final ToggleSetting upgradedFocusVisCost = new ToggleSetting(
+        this,
+        "upgradedFocusVisCost",
+        "Makes certain upgraded foci (ex. Wand Focus: Fire with Fireball upgrade) spend the upgraded vis cost rather than the default.");
 
     @Nonnull
     @Override

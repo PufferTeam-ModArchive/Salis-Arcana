@@ -167,3 +167,9 @@ Prevent Warded Jars and Node in a Jar from dropping items when broken in Creativ
 **Config option:** `bannerNoCreativeDrops`
 
 Prevent Banners from dropping items when broken in Creative.
+
+## Spend the Correct Vis Cost of Upgraded Foci
+
+**Config option:** `upgradedFocusVisCost`
+
+Makes certain upgraded foci (ex. Wand Focus: Fire with Fireball upgrade) spend the upgraded vis cost rather than the default.

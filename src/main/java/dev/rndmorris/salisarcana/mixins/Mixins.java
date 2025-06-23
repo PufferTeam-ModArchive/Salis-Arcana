@@ -167,7 +167,11 @@ public enum Mixins {
     BANNER_NO_CREATIVE_DROPS(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.bannerNoCreativeDrops::isEnabled)
-        .addMixinClasses("blocks.MixinBlockWoodenDevice_NoBannerCreativeDrops")
+        .addMixinClasses("blocks.MixinBlockWoodenDevice_NoBannerCreativeDrops"),
+    WAND_FOCUS_LEVEL_PATCH(new Builder().setPhase(Phase.LATE)
+        .setSide(Side.BOTH)
+        .setApplyIf(SalisConfig.bugfixes.upgradedFocusVisCost::isEnabled)
+        .addMixinClasses("api.MixinItemFocusBasic_WandUpgradeLevel")
         .addTargetedMod(TargetedMod.THAUMCRAFT)),
 
     // Features
