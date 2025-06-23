@@ -173,3 +173,9 @@ Prevent Banners from dropping items when broken in Creative.
 **Config option:** `upgradedFocusVisCost`
 
 Makes certain upgraded foci (ex. Wand Focus: Fire with Fireball upgrade) spend the upgraded vis cost rather than the default.
+
+## Pick-Block Warded Jars Accurately
+
+**Config option:** `jarPickBlock`
+
+Causes Warded Jars and Node in a Jar to create an item with the current contents of the jar when pick-block is used, rather than an empty jar. Also fixes the WAILA tooltip for those blocks.

@@ -169,6 +169,11 @@ public class ConfigBugfixes extends ConfigGroup {
         this,
         "upgradedFocusVisCost",
         "Makes certain upgraded foci (ex. Wand Focus: Fire with Fireball upgrade) spend the upgraded vis cost rather than the default.");
+    
+    public final ToggleSetting jarPickBlock = new ToggleSetting(
+        this,
+        "jarPickBlock",
+        "Causes Warded Jars and Node in a Jar to create an item with the current contents of the jar when pick-block is used. Also fixes the WAILA tooltip for those blocks.");
 
     @Nonnull
     @Override

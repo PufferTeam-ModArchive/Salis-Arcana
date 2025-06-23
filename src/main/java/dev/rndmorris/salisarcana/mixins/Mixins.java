@@ -171,7 +171,11 @@ public enum Mixins {
     WAND_FOCUS_LEVEL_PATCH(new Builder().setPhase(Phase.LATE)
         .setSide(Side.BOTH)
         .setApplyIf(SalisConfig.bugfixes.upgradedFocusVisCost::isEnabled)
-        .addMixinClasses("api.MixinItemFocusBasic_WandUpgradeLevel")
+        .addMixinClasses("api.MixinItemFocusBasic_WandUpgradeLevel"),
+    JAR_PICK_BLOCK(new Builder().setPhase(Phase.LATE)
+        .setSide(Side.BOTH)
+        .setApplyIf(SalisConfig.bugfixes.jarPickBlock::isEnabled)
+        .addMixinClasses("blocks.MixinBlockJar_PickBlock")
         .addTargetedMod(TargetedMod.THAUMCRAFT)),
 
     // Features
